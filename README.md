@@ -85,14 +85,6 @@ Standard training with fault injection and recompute
 
 ---
 
-### Debugging Single Fault Injection
-
-Deterministic single-fault debugging configuration:
-
-
-
----
-
 ## Configuration
 
 Shared experiment parameters are defined in:
