@@ -13,15 +13,11 @@ As Large Language Models (LLMs) scale in size and complexity, the consequences o
 This work provides a controlled study of how intermittent SDC affects LLM pretraining. Using targeted fault injection at the level of GPU matrix-multiply instructions, we characterize the sensitivity of different bit positions, kernel functions, and execution stages. Our analysis shows that locally originating faults can produce impactful corruption, including NaN propagation, short-lived spikes in loss, gradient norm, and attention logits, as well as persistent parameter divergence. Building on the observed corruption signatures, we propose a lightweight detection method that identifies potentially harmful parameter updates.
 Experiments on LLaMA models with 60M, 350M, and 1.3B parameters demonstrate that recomputing the most recent training step upon detection can effectively mitigate the impact of these events.
 
----
-
 ## Prerequisites
 
 - Python 3.12.3
 - NVIDIA GPU with Tensor Core support  
   (experiments were conducted on an NVIDIA L40S)
-
----
 
 ## Getting Started
 
@@ -33,8 +29,6 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
 ## NVBit Fault Injection Setup
 
 Build the NVBit fault injection tool:
@@ -44,8 +38,6 @@ cd ./nvbit/1.7.4_nvbit_release/tools/fault_injection/
 make clean && make
 cd ../../../..
 ```
-
----
 
 ## Running Experiments
 
@@ -57,8 +49,6 @@ Standard training without fault injection:
 ./scripts/base/train_baseline.sh
 ```
 
----
-
 ### Runtime Baseline (No Detection)
 
 Runtime comparison experiment without anomaly detection:
@@ -66,8 +56,6 @@ Runtime comparison experiment without anomaly detection:
 ```bash
 ./scripts/base/train_baseline_no_detection.sh
 ```
-
----
 
 ### Fault Injection Training
 
@@ -83,8 +71,6 @@ Standard training with fault injection and recompute
 ./scripts/fi/train_fi_recompute.sh
 ```
 
----
-
 ## Configuration
 
 Shared experiment parameters are defined in:
@@ -98,8 +84,6 @@ Shared NVBit parameters are defined in:
 ```bash
 scripts/configs/nvbit_default.sh
 ```
-
----
 
 ## Acknowledgement
 
