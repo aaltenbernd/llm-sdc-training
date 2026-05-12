@@ -4,8 +4,6 @@ Exploring Silent Data Corruption as a Reliability Challenge in Large Language Mo
 
 Paper: https://arxiv.org/pdf/2604.00726
 
----
-
 ## Abstract
 
 As Large Language Models (LLMs) scale in size and complexity, the consequences of failures during training become increasingly severe. A major challenge arises from Silent Data Corruption (SDC): hardware-induced faults that bypass system-level detection mechanisms. SDC may behave like benign numerical noise, but can also cause harmful gradient corruption that leads to loss spikes, divergence, or stalled progress.
