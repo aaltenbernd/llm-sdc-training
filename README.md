@@ -107,7 +107,6 @@ scripts/configs/nvbit_default.sh
 
 ## Acknowledgement
 
-This repository is built upon the excellent
-[GaLore](https://github.com/jiaweizzhao/GaLore) repository.
+This repository is built upon the [GaLore](https://github.com/jiaweizzhao/GaLore) repository.
 
 Thanks to the authors for their work.
