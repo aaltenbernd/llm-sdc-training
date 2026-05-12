@@ -26,8 +26,6 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## NVBit Fault Injection Setup
-
 Build the NVBit fault injection tool:
 
 ```bash
