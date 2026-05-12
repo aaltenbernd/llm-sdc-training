@@ -16,8 +16,7 @@ Experiments on LLaMA models with 60M, 350M, and 1.3B parameters demonstrate that
 ## Prerequisites
 
 - Python 3.12.3
-- NVIDIA GPU with Tensor Core support  
-  (experiments were conducted on an NVIDIA L40S)
+- Experiments were conducted on a NVIDIA L40S
 
 ## Getting Started
 
