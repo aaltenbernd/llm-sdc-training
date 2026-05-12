@@ -1,0 +1,2146 @@
+------------- NVBit (NVidia Binary Instrumentation Tool v1.7.4) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+ACK_CTX_INIT_LIMITATION = 0 - if set, no warning will be printed for nvbit_at_ctx_init()
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+       NO_EAGER_LOAD = 0 - eager module loading is turned on by NVBit to prevent potential NVBit tool deadlock, turn it off if you want to use the lazy module loading feature
+---------------------------------------------------------------------------------
+         TARGET_FUNC = 4 - Target func
+        TARGET_INSTR = -1 - Target instr
+        TARGET_COUNT = -1 - Intruction count target
+       TARGET_BEFORE = 0 - Inject before the target
+         TARGET_SMID = -1 - Inject for SM ID
+       TARGET_LANEID = -1 - Inject for Lane ID
+     TARGET_REGISTER = 0 - Inject for register
+      TARGET_BITMASK = -1 - Inject for bit mask
+     TARGET_THREADID = -1 - target thread id
+         TARGET_TCID = -1 - TARGET_TCID
+       TARGET_WARPID = -1 - TARGET_WARPID
+           TARGET_OP = FMUL - TARGET_OP
+    RESTORE_REGISTER = -1 - restore register
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+        TOOL_VERBOSE = 1 - Enable verbosity inside the tool
+----------------------------------------------------------------------------------------------------
+PRINTF2: STARTING CONTEXT 0x1921f160
+inspecting void at::native::(anonymous namespace)::distribution_elementwise_grid_stride_kernel<float, 4, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2}, at::native::(anonymous namespace)::distribution_nullary_kernel<float, float, float4, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2}, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2} const&, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(int, float)#1}>(long, at::PhiloxCudaState, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2}, at::native::(anonymous namespace)::distribution_nullary_kernel<float, float, float4, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2}, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_and_transform<float, float, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::CUDAGeneratorImpl*, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(curandStatePhilox4_32_10*)#2} const&, at::native::templates::cuda::uniform_kernel<at::CUDAGeneratorImpl*>(at::TensorIteratorBase&, double, double, at::CUDAGeneratorImpl*)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1})::{lambda(int, float)#1}) - num instrs 384
+inspecting void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>) - num instrs 152
+inspecting void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>) - num instrs 152
+inspecting void at::native::vectorized_elementwise_kernel<8, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>) - num instrs 152
+inspecting ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_nn - num instrs 1056
+[NVBit Fault Injector] MOV R2, RZ ;idx: 0; func: 4
+
+[NVBit Fault Injector] MOV R183, c[0x0][0x1e4] ;idx: 1; func: 4
+
+[NVBit Fault Injector] S2R R182, SR_CTAID.Z ;idx: 2; func: 4
+
+[NVBit Fault Injector] S2R R175, SR_TID.X ;idx: 3; func: 4
+
+[NVBit Fault Injector] S2R R180, SR_CTAID.X ;idx: 4; func: 4
+
+[NVBit Fault Injector] S2R R181, SR_CTAID.Y ;idx: 5; func: 4
+
+[NVBit Fault Injector] ISETP.NE.AND P0, PT, RZ, c[0x0][0x200], PT ;idx: 6; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R3, R183, 0xf00, RZ, 0xc0, !PT ;idx: 7; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P5, RZ, R183, 0x1000, RZ, 0xc0, !PT ;idx: 8; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R3, RZ, 0x8, R3 ;idx: 9; func: 4
+
+[NVBit Fault Injector] BMSK R4, R3, 0x1 ;idx: 10; func: 4
+
+[NVBit Fault Injector] BMSK R5, RZ, R3 ;idx: 11; func: 4
+
+[NVBit Fault Injector] PLOP3.LUT P4, PT, PT, PT, PT, 0x2, 0x20 ;idx: 12; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R6, R181, R5, RZ, 0xfc, !PT ;idx: 13; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R5, 0x3, PT ;idx: 14; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P2, PT, R6, c[0x0][0x10], PT ;idx: 15; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R7, R181.reuse, R5.reuse, RZ, 0xc0, !PT ;idx: 16; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R10, R181, R4, RZ, 0xc0, !PT ;idx: 17; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R6, c[0x0][0x10], P3 ;idx: 18; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R8, R181.reuse, R5, RZ, 0x30, !PT ;idx: 19; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R9, R7, c[0x0][0xc], R180 ;idx: 20; func: 4
+
+[NVBit Fault Injector] @P5 ISETP.EQ.XOR P4, PT, R10, R4, P4 ;idx: 21; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R4, RZ, 0x1, R4 ;idx: 22; func: 4
+
+[NVBit Fault Injector] @P2 BRA 0x210 ;idx: 23; func: 4
+
+[NVBit Fault Injector] @!P3 SHF.R.U32.HI R5, RZ, 0x1, R5 ;idx: 24; func: 4
+
+[NVBit Fault Injector] @!P3 IADD3 R3, R3, -0x1, RZ ;idx: 25; func: 4
+
+[NVBit Fault Injector] @!P3 BRA 0xd0 ;idx: 26; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R12, R9, 0x55555556, RZ ;idx: 27; func: 4
+
+[NVBit Fault Injector] IADD3 R181, R8, R9, RZ ;idx: 28; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R181, R13, -0x3, R181 ;idx: 29; func: 4
+
+[NVBit Fault Injector] @!P4 MOV R180, R13 ;idx: 30; func: 4
+
+[NVBit Fault Injector] @P4 IADD3.X R180, ~R13, c[0x0][0xc], RZ, !PT, !PT ;idx: 31; func: 4
+
+[NVBit Fault Injector] BRA 0x240 ;idx: 32; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R180, RZ, R3, R9 ;idx: 33; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R181, R8, R9, R5, 0xf8, !PT ;idx: 34; func: 4
+
+[NVBit Fault Injector] @P4 IADD3.X R180, ~R180, c[0x0][0xc], RZ, !PT, !PT ;idx: 35; func: 4
+
+[NVBit Fault Injector] MOV R184, c[0x0][0x1f0] ;idx: 36; func: 4
+
+[NVBit Fault Injector] MOV R185, c[0x0][0x1f4] ;idx: 37; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P3, RZ, R183, 0x4, RZ, 0xc0, !PT ;idx: 38; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R3, R182, c[0x0][0x1e0], RZ ;idx: 39; func: 4
+
+[NVBit Fault Injector] IADD3 R3, -R3, c[0x0][0x1d0], RZ ;idx: 40; func: 4
+
+[NVBit Fault Injector] MOV R174, c[0x0][0x1d0] ;idx: 41; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R3, c[0x0][0x1e0], P3 ;idx: 42; func: 4
+
+[NVBit Fault Injector] @P3 MOV R174, c[0x0][0x1e0] ;idx: 43; func: 4
+
+[NVBit Fault Injector] @P4 MOV R174, R3 ;idx: 44; func: 4
+
+[NVBit Fault Injector] @P0 LDG.E.LTC128B.CONSTANT R128, [R184] ;idx: 45; func: 4
+
+[NVBit Fault Injector] @!P0 MOV R128, c[0x0][0x1fc] ;idx: 46; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R186, R175, 0x2, RZ ;idx: 47; func: 4
+
+[NVBit Fault Injector] STS [R186+0x4000], RZ ;idx: 48; func: 4
+
+[NVBit Fault Injector] UMOV UR9, 0x4000 ;idx: 49; func: 4
+
+[NVBit Fault Injector] MOV R7, RZ ;idx: 50; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R3, R175, 0x7, RZ, 0xc0, !PT ;idx: 51; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R4, RZ, 0x3, R175 ;idx: 52; func: 4
+
+[NVBit Fault Injector] MOV R9, RZ ;idx: 53; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R8, R3, 0x3, RZ ;idx: 54; func: 4
+
+[NVBit Fault Injector] LEA R6, R180, R8, 0x7 ;idx: 55; func: 4
+
+[NVBit Fault Injector] IADD3 R5, R6, -c[0x0][0x1c8], RZ ;idx: 56; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R6, R4, c[0x0][0x1b8], R6 ;idx: 57; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R11, RZ, 0x3, R175 ;idx: 58; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R10, R175, 0x7, RZ, 0xc0, !PT ;idx: 59; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R12, R11, 0x7, RZ ;idx: 60; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R10, R10, R11, RZ, 0x3c, !PT ;idx: 61; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R10, R10, 0x7, RZ, 0xc0, !PT ;idx: 62; func: 4
+
+[NVBit Fault Injector] LEA R129, R10, R12, 0x4 ;idx: 63; func: 4
+
+[NVBit Fault Injector] MOV R11, RZ ;idx: 64; func: 4
+
+[NVBit Fault Injector] MOV R15, RZ ;idx: 65; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R10, R175, 0x3, RZ, 0xc0, !PT ;idx: 66; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R12, RZ, 0x2, R175 ;idx: 67; func: 4
+
+[NVBit Fault Injector] MOV R17, RZ ;idx: 68; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R16, R10, 0x3, RZ ;idx: 69; func: 4
+
+[NVBit Fault Injector] LEA R14, R181, R12, 0x7 ;idx: 70; func: 4
+
+[NVBit Fault Injector] IADD3 R13, R14, -c[0x0][0x1cc], RZ ;idx: 71; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R14, R14, c[0x0][0x1bc], R16 ;idx: 72; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R19, RZ, 0x3, R175 ;idx: 73; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R18, R175, 0x7, RZ, 0xc0, !PT ;idx: 74; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R20, R19, 0x7, RZ ;idx: 75; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R18, R18, R19, RZ, 0x3c, !PT ;idx: 76; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R18, R18, 0x7, RZ, 0xc0, !PT ;idx: 77; func: 4
+
+[NVBit Fault Injector] LEA R166, R18, R20, 0x4 ;idx: 78; func: 4
+
+[NVBit Fault Injector] IADD3 R166, R166, 0x2000, RZ ;idx: 79; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P2, R18, R183, 0x7, RZ, 0xc0, !PT ;idx: 80; func: 4
+
+[NVBit Fault Injector] MOV R130, c[0x0][0x160] ;idx: 81; func: 4
+
+[NVBit Fault Injector] MOV R131, c[0x0][0x164] ;idx: 82; func: 4
+
+[NVBit Fault Injector] @!P2 BRA.U 0x5e0 ;idx: 83; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P2, PT, R18, 0x2, PT ;idx: 84; func: 4
+
+[NVBit Fault Injector] @!P2 BRA.U 0x5a0 ;idx: 85; func: 4
+
+[NVBit Fault Injector] LEA R130, P2, R182.reuse, c[0x0][0x160], 0x3 ;idx: 86; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R131, R182, c[0x0][0x164], RZ, 0x3, P2 ;idx: 87; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.CONSTANT R130, [R130] ;idx: 88; func: 4
+
+[NVBit Fault Injector] BRA.U 0x5e0 ;idx: 89; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R20, R182, c[0x0][0x198], RZ ;idx: 90; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R21, R182, c[0x0][0x19c], R21 ;idx: 91; func: 4
+
+[NVBit Fault Injector] LEA R130, P2, R20.reuse, c[0x0][0x160], 0x1 ;idx: 92; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R131, R20, c[0x0][0x164], R21, 0x1, P2 ;idx: 93; func: 4
+
+[NVBit Fault Injector] LEA R130, P2, R6.reuse, R130, 0x1 ;idx: 94; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R131, R6, R131, R7, 0x1, P2 ;idx: 95; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P2, R18, R183, 0x7, RZ, 0xc0, !PT ;idx: 96; func: 4
+
+[NVBit Fault Injector] MOV R164, c[0x0][0x168] ;idx: 97; func: 4
+
+[NVBit Fault Injector] MOV R165, c[0x0][0x16c] ;idx: 98; func: 4
+
+[NVBit Fault Injector] @!P2 BRA.U 0x6e0 ;idx: 99; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P2, PT, R18, 0x2, PT ;idx: 100; func: 4
+
+[NVBit Fault Injector] @!P2 BRA.U 0x6a0 ;idx: 101; func: 4
+
+[NVBit Fault Injector] LEA R164, P2, R182.reuse, c[0x0][0x168], 0x3 ;idx: 102; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R165, R182, c[0x0][0x16c], RZ, 0x3, P2 ;idx: 103; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.CONSTANT R164, [R164] ;idx: 104; func: 4
+
+[NVBit Fault Injector] BRA.U 0x6e0 ;idx: 105; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R20, R182, c[0x0][0x1a0], RZ ;idx: 106; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R21, R182, c[0x0][0x1a4], R21 ;idx: 107; func: 4
+
+[NVBit Fault Injector] LEA R164, P2, R20.reuse, c[0x0][0x168], 0x1 ;idx: 108; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R165, R20, c[0x0][0x16c], R21, 0x1, P2 ;idx: 109; func: 4
+
+[NVBit Fault Injector] LEA R164, P2, R14.reuse, R164, 0x1 ;idx: 110; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R165, R14, R165, R15, 0x1, P2 ;idx: 111; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R1, RZ, 0x5, R174 ;idx: 112; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R1, R1, 0x5, RZ ;idx: 113; func: 4
+
+[NVBit Fault Injector] IADD3 R1, R174, -R1, RZ ;idx: 114; func: 4
+
+[NVBit Fault Injector] ISETP.GT.AND P0, PT, R1, RZ, PT ;idx: 115; func: 4
+
+[NVBit Fault Injector] @!P0 BRA.U 0x830 ;idx: 116; func: 4
+
+[NVBit Fault Injector] IADD3 R18, R4, -R1, RZ ;idx: 117; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R18, 0x0, PT ;idx: 118; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R5, 0x0, P0 ;idx: 119; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R5, -0x40, P0 ;idx: 120; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R18, -0x10, PT ;idx: 121; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P5, PT, R5, 0x0, P0 ;idx: 122; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P6, PT, R5, -0x40, P0 ;idx: 123; func: 4
+
+[NVBit Fault Injector] P2R R0, PR, RZ, 0x78 ;idx: 124; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R16, R1, PT ;idx: 125; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R13, 0x0, P0 ;idx: 126; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R13, -0x20, P0 ;idx: 127; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P5, PT, R13, -0x40, P0 ;idx: 128; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P6, PT, R13, -0x60, P0 ;idx: 129; func: 4
+
+[NVBit Fault Injector] P2R.B1 R0, PR, R0, 0x78 ;idx: 130; func: 4
+
+[NVBit Fault Injector] IADD3 R18, R4, -R174, RZ ;idx: 131; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R18, 0x0, PT ;idx: 132; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R5, 0x0, P0 ;idx: 133; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R5, -0x40, P0 ;idx: 134; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R18, -0x10, PT ;idx: 135; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P5, PT, R5, 0x0, P0 ;idx: 136; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P6, PT, R5, -0x40, P0 ;idx: 137; func: 4
+
+[NVBit Fault Injector] P2R R173, PR, RZ, 0x78 ;idx: 138; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P0, PT, R16, R174, PT ;idx: 139; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R13, 0x0, P0 ;idx: 140; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R13, -0x20, P0 ;idx: 141; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P5, PT, R13, -0x40, P0 ;idx: 142; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P6, PT, R13, -0x60, P0 ;idx: 143; func: 4
+
+[NVBit Fault Injector] P2R.B1 R173, PR, R173, 0x78 ;idx: 144; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 145; func: 4
+
+[NVBit Fault Injector] MOV R176, 0x40 ;idx: 146; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R176, R176, c[0x0][0x1b8], RZ ;idx: 147; func: 4
+
+[NVBit Fault Injector] MOV R178, 0x40 ;idx: 148; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R178, R178, 0x1, RZ ;idx: 149; func: 4
+
+[NVBit Fault Injector] ISETP.LE.AND P0, PT, R1, RZ, PT ;idx: 150; func: 4
+
+[NVBit Fault Injector] ISETP.GT.AND P0, PT, R1, RZ, PT ;idx: 151; func: 4
+
+[NVBit Fault Injector] @P0 ISETP.GT.AND P0, PT, R174, 0x20, PT ;idx: 152; func: 4
+
+[NVBit Fault Injector] @P0 SHF.R.S32.HI R2, RZ, 0x5, R174 ;idx: 153; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R130, R2, R176, R130 ;idx: 154; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R164, R2, R178, R164 ;idx: 155; func: 4
+
+[NVBit Fault Injector] @P0 R2P PR, R0, 0x78 ;idx: 156; func: 4
+
+[NVBit Fault Injector] @!P0 R2P PR, R173, 0x78 ;idx: 157; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R132, [R130], P3 ;idx: 158; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R136, [R130+0x80], P4 ;idx: 159; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x178], RZ ;idx: 160; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x17c], RZ, P2, !PT ;idx: 161; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R140, [R130], P5 ;idx: 162; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R144, [R130+0x80], P6 ;idx: 163; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x188], RZ ;idx: 164; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x18c], RZ, P2, !PT ;idx: 165; func: 4
+
+[NVBit Fault Injector] @P0 IADD3 R2, R2, 0x1, RZ ;idx: 166; func: 4
+
+[NVBit Fault Injector] @P0 IMAD R2, R2, -0x1, RZ ;idx: 167; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE R130, R2, R176, R130 ;idx: 168; func: 4
+
+[NVBit Fault Injector] @P0 R2P PR, R0.B1, 0x78 ;idx: 169; func: 4
+
+[NVBit Fault Injector] @!P0 R2P PR, R173.B1, 0x78 ;idx: 170; func: 4
+
+[NVBit Fault Injector] @P0 IADD3 R174, R174, -R1, RZ ;idx: 171; func: 4
+
+[NVBit Fault Injector] @!P0 IADD3 R174, R174, -0x20, RZ ;idx: 172; func: 4
+
+[NVBit Fault Injector] ISETP.GE.AND P0, PT, R174, 0x20, PT ;idx: 173; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R148, [R164], P3 ;idx: 174; func: 4
+
+[NVBit Fault Injector] IADD3 R20, P2, R164, c[0x0][0x180], RZ ;idx: 175; func: 4
+
+[NVBit Fault Injector] IADD3.X R21, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 176; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R152, [R20], P4 ;idx: 177; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R20, c[0x0][0x180], RZ ;idx: 178; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R21, c[0x0][0x184], RZ, P2, !PT ;idx: 179; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R156, [R164], P5 ;idx: 180; func: 4
+
+[NVBit Fault Injector] IADD3 R20, P2, R164, c[0x0][0x180], RZ ;idx: 181; func: 4
+
+[NVBit Fault Injector] IADD3.X R21, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 182; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R160, [R20], P6 ;idx: 183; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R20, c[0x0][0x190], RZ ;idx: 184; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R21, c[0x0][0x194], RZ, P2, !PT ;idx: 185; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE R164, R2, R178, R164 ;idx: 186; func: 4
+
+[NVBit Fault Injector] LDS.128 R0, [0x4000] ;idx: 187; func: 4
+
+[NVBit Fault Injector] CS2R R4, SRZ ;idx: 188; func: 4
+
+[NVBit Fault Injector] CS2R R6, SRZ ;idx: 189; func: 4
+
+[NVBit Fault Injector] LDS.128 R8, [0x4000] ;idx: 190; func: 4
+
+[NVBit Fault Injector] CS2R R12, SRZ ;idx: 191; func: 4
+
+[NVBit Fault Injector] CS2R R14, SRZ ;idx: 192; func: 4
+
+[NVBit Fault Injector] LDS.128 R16, [0x4000] ;idx: 193; func: 4
+
+[NVBit Fault Injector] CS2R R20, SRZ ;idx: 194; func: 4
+
+[NVBit Fault Injector] CS2R R22, SRZ ;idx: 195; func: 4
+
+[NVBit Fault Injector] LDS.128 R24, [0x4000] ;idx: 196; func: 4
+
+[NVBit Fault Injector] CS2R R28, SRZ ;idx: 197; func: 4
+
+[NVBit Fault Injector] CS2R R30, SRZ ;idx: 198; func: 4
+
+[NVBit Fault Injector] LDS.128 R32, [0x4000] ;idx: 199; func: 4
+
+[NVBit Fault Injector] CS2R R36, SRZ ;idx: 200; func: 4
+
+[NVBit Fault Injector] CS2R R38, SRZ ;idx: 201; func: 4
+
+[NVBit Fault Injector] LDS.128 R40, [0x4000] ;idx: 202; func: 4
+
+[NVBit Fault Injector] CS2R R44, SRZ ;idx: 203; func: 4
+
+[NVBit Fault Injector] CS2R R46, SRZ ;idx: 204; func: 4
+
+[NVBit Fault Injector] LDS.128 R48, [0x4000] ;idx: 205; func: 4
+
+[NVBit Fault Injector] CS2R R52, SRZ ;idx: 206; func: 4
+
+[NVBit Fault Injector] CS2R R54, SRZ ;idx: 207; func: 4
+
+[NVBit Fault Injector] LDS.128 R56, [0x4000] ;idx: 208; func: 4
+
+[NVBit Fault Injector] CS2R R60, SRZ ;idx: 209; func: 4
+
+[NVBit Fault Injector] CS2R R62, SRZ ;idx: 210; func: 4
+
+[NVBit Fault Injector] LDS.128 R64, [0x4000] ;idx: 211; func: 4
+
+[NVBit Fault Injector] CS2R R68, SRZ ;idx: 212; func: 4
+
+[NVBit Fault Injector] CS2R R70, SRZ ;idx: 213; func: 4
+
+[NVBit Fault Injector] LDS.128 R72, [0x4000] ;idx: 214; func: 4
+
+[NVBit Fault Injector] CS2R R76, SRZ ;idx: 215; func: 4
+
+[NVBit Fault Injector] CS2R R78, SRZ ;idx: 216; func: 4
+
+[NVBit Fault Injector] LDS.128 R80, [0x4000] ;idx: 217; func: 4
+
+[NVBit Fault Injector] CS2R R84, SRZ ;idx: 218; func: 4
+
+[NVBit Fault Injector] CS2R R86, SRZ ;idx: 219; func: 4
+
+[NVBit Fault Injector] LDS.128 R88, [0x4000] ;idx: 220; func: 4
+
+[NVBit Fault Injector] CS2R R92, SRZ ;idx: 221; func: 4
+
+[NVBit Fault Injector] CS2R R94, SRZ ;idx: 222; func: 4
+
+[NVBit Fault Injector] LDS.128 R96, [0x4000] ;idx: 223; func: 4
+
+[NVBit Fault Injector] CS2R R100, SRZ ;idx: 224; func: 4
+
+[NVBit Fault Injector] CS2R R102, SRZ ;idx: 225; func: 4
+
+[NVBit Fault Injector] LDS.128 R104, [0x4000] ;idx: 226; func: 4
+
+[NVBit Fault Injector] CS2R R108, SRZ ;idx: 227; func: 4
+
+[NVBit Fault Injector] CS2R R110, SRZ ;idx: 228; func: 4
+
+[NVBit Fault Injector] LDS.128 R112, [0x4000] ;idx: 229; func: 4
+
+[NVBit Fault Injector] CS2R R116, SRZ ;idx: 230; func: 4
+
+[NVBit Fault Injector] CS2R R118, SRZ ;idx: 231; func: 4
+
+[NVBit Fault Injector] LDS.128 R120, [0x4000] ;idx: 232; func: 4
+
+[NVBit Fault Injector] CS2R R124, SRZ ;idx: 233; func: 4
+
+[NVBit Fault Injector] CS2R R126, SRZ ;idx: 234; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R176, RZ, 0x5, R175 ;idx: 235; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R177, R176, 0x1, RZ, 0xc0, !PT ;idx: 236; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R178, RZ, 0x1, R176 ;idx: 237; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R179, RZ, 0x1, R178 ;idx: 238; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R182, R178, 0x1, RZ, 0xc0, !PT ;idx: 239; func: 4
+
+[NVBit Fault Injector] IMAD.SHL R179, R179, 0x1000, RZ ;idx: 240; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R187, R175, 0x1f, RZ, 0xc0, !PT ;idx: 241; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R187, 0x7, RZ, 0xc0, !PT ;idx: 242; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R187, RZ, 0x3, R187 ;idx: 243; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R188, R183, 0x7, RZ ;idx: 244; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R187, R183, R187, RZ, 0x3c, !PT ;idx: 245; func: 4
+
+[NVBit Fault Injector] IMAD R188, R177, 0x1000, R188 ;idx: 246; func: 4
+
+[NVBit Fault Injector] LEA R167, R187, R188, 0x4 ;idx: 247; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R168, R167, 0x40, RZ, 0x3c, !PT ;idx: 248; func: 4
+
+[NVBit Fault Injector] UMOV UR8, URZ ;idx: 249; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R176, RZ, 0x5, R175 ;idx: 250; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R177, R176, 0x1, RZ, 0xc0, !PT ;idx: 251; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R178, RZ, 0x1, R176 ;idx: 252; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R179, RZ, 0x1, R178 ;idx: 253; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R182, R178, 0x1, RZ, 0xc0, !PT ;idx: 254; func: 4
+
+[NVBit Fault Injector] IMAD.SHL R179, R179, 0x40, RZ ;idx: 255; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R175, 0x1f, RZ, 0xc0, !PT ;idx: 256; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R187, RZ, 0x1, R183 ;idx: 257; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R183, 0x7, RZ, 0xc0, !PT ;idx: 258; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R183, 0x1, RZ, 0xc0, !PT ;idx: 259; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R183, R183, 0x2, RZ ;idx: 260; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R183, R187, RZ, 0x3c, !PT ;idx: 261; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R189, R187, 0x7, RZ ;idx: 262; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R183, R183, 0x7, RZ, 0xc0, !PT ;idx: 263; func: 4
+
+[NVBit Fault Injector] IMAD R189, R182, 0x1000, R189 ;idx: 264; func: 4
+
+[NVBit Fault Injector] LEA R169, R183, R189, 0x4 ;idx: 265; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R169, R169, R179, RZ, 0x3c, !PT ;idx: 266; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R170, R169, 0x10, RZ, 0x3c, !PT ;idx: 267; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R171, R169, 0x20, RZ, 0x3c, !PT ;idx: 268; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R172, R169, 0x30, RZ, 0x3c, !PT ;idx: 269; func: 4
+
+[NVBit Fault Injector] STS.128 [R129], R132 ;idx: 270; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x1000], R136 ;idx: 271; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x800], R140 ;idx: 272; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x1800], R144 ;idx: 273; func: 4
+
+[NVBit Fault Injector] STS.128 [R166], R148 ;idx: 274; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x800], R152 ;idx: 275; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x1000], R156 ;idx: 276; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x1800], R160 ;idx: 277; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R129, R129, 0x4000, RZ, 0x3c, !PT ;idx: 278; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R166, R166, 0x4000, RZ, 0x3c, !PT ;idx: 279; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 280; func: 4
+
+[NVBit Fault Injector] @P0 R2P PR, R173, 0x78 ;idx: 281; func: 4
+
+[NVBit Fault Injector] @!P0 R2P PR, RZ, 0x78 ;idx: 282; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R132, [R130], P3 ;idx: 283; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R136, [R130+0x80], P4 ;idx: 284; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x178], RZ ;idx: 285; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x17c], RZ, P2, !PT ;idx: 286; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R140, [R130], P5 ;idx: 287; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R144, [R130+0x80], P6 ;idx: 288; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x188], RZ ;idx: 289; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x18c], RZ, P2, !PT ;idx: 290; func: 4
+
+[NVBit Fault Injector] @P0 R2P PR, R173.B1, 0x78 ;idx: 291; func: 4
+
+[NVBit Fault Injector] @!P0 R2P PR, RZ, 0x78 ;idx: 292; func: 4
+
+[NVBit Fault Injector] IADD3 R174, R174, -0x20, RZ ;idx: 293; func: 4
+
+[NVBit Fault Injector] ISETP.GE.AND P0, PT, R174, 0x20, PT ;idx: 294; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R148, [R164], P3 ;idx: 295; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 296; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 297; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R152, [R164], P4 ;idx: 298; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 299; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 300; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R156, [R164], P5 ;idx: 301; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 302; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 303; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R160, [R164], P6 ;idx: 304; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x190], RZ ;idx: 305; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x194], RZ, P2, !PT ;idx: 306; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R176, [R167+UR8] ;idx: 307; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R180, [R168+UR8] ;idx: 308; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R192, [R169+UR8+0x2000] ;idx: 309; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R196, [R169+UR8+0x2800] ;idx: 310; func: 4
+
+[NVBit Fault Injector] @!P0 BRA.U 0x1ef0 ;idx: 311; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R0, R176, R192.reuse, R0 ;idx: 312; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R184, [R167+UR8+0x400] ;idx: 313; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R32, R178, R192.reuse, R32 ;idx: 314; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R200, [R170+UR8+0x2000] ;idx: 315; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R64, R180, R192.reuse, R64 ;idx: 316; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R188, [R168+UR8+0x400] ;idx: 317; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R96, R182.reuse, R192, R96 ;idx: 318; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R204, [R170+UR8+0x2800] ;idx: 319; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R100, R182, R193.reuse, R100 ;idx: 320; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R68, R180, R193.reuse, R68 ;idx: 321; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R36, R178, R193.reuse, R36 ;idx: 322; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R4, R176.reuse, R193, R4 ;idx: 323; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R8, R176, R194.reuse, R8 ;idx: 324; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R40, R178, R194.reuse, R40 ;idx: 325; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R72, R180, R194.reuse, R72 ;idx: 326; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R104, R182.reuse, R194, R104 ;idx: 327; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R108, R182, R195.reuse, R108 ;idx: 328; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R76, R180, R195.reuse, R76 ;idx: 329; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R44, R178, R195.reuse, R44 ;idx: 330; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R12, R176.reuse, R195, R12 ;idx: 331; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R16, R176, R196.reuse, R16 ;idx: 332; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R48, R178, R196.reuse, R48 ;idx: 333; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R80, R180, R196.reuse, R80 ;idx: 334; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R112, R182.reuse, R196, R112 ;idx: 335; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R116, R182, R197.reuse, R116 ;idx: 336; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R84, R180, R197.reuse, R84 ;idx: 337; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R52, R178, R197.reuse, R52 ;idx: 338; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R20, R176.reuse, R197, R20 ;idx: 339; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R24, R176, R198.reuse, R24 ;idx: 340; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R56, R178, R198.reuse, R56 ;idx: 341; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R88, R180, R198.reuse, R88 ;idx: 342; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R120, R182.reuse, R198, R120 ;idx: 343; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R124, R182, R199.reuse, R124 ;idx: 344; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R92, R180, R199.reuse, R92 ;idx: 345; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R60, R178, R199.reuse, R60 ;idx: 346; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R28, R176, R199, R28 ;idx: 347; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R0, R184, R200.reuse, R0 ;idx: 348; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R176, [R167+UR8+0x800] ;idx: 349; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R32, R186, R200.reuse, R32 ;idx: 350; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R192, [R171+UR8+0x2000] ;idx: 351; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R64, R188, R200.reuse, R64 ;idx: 352; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R180, [R168+UR8+0x800] ;idx: 353; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R96, R190.reuse, R200, R96 ;idx: 354; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R196, [R171+UR8+0x2800] ;idx: 355; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R100, R190, R201.reuse, R100 ;idx: 356; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R68, R188, R201.reuse, R68 ;idx: 357; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R36, R186, R201.reuse, R36 ;idx: 358; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R4, R184.reuse, R201, R4 ;idx: 359; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R8, R184, R202.reuse, R8 ;idx: 360; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R40, R186, R202.reuse, R40 ;idx: 361; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R72, R188, R202.reuse, R72 ;idx: 362; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R104, R190.reuse, R202, R104 ;idx: 363; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R108, R190, R203.reuse, R108 ;idx: 364; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R76, R188, R203.reuse, R76 ;idx: 365; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R44, R186, R203.reuse, R44 ;idx: 366; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R12, R184.reuse, R203, R12 ;idx: 367; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R16, R184, R204.reuse, R16 ;idx: 368; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R48, R186, R204.reuse, R48 ;idx: 369; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R80, R188, R204.reuse, R80 ;idx: 370; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R112, R190.reuse, R204, R112 ;idx: 371; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R116, R190, R205.reuse, R116 ;idx: 372; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R84, R188, R205.reuse, R84 ;idx: 373; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R52, R186, R205.reuse, R52 ;idx: 374; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R20, R184.reuse, R205, R20 ;idx: 375; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R24, R184, R206.reuse, R24 ;idx: 376; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R56, R186, R206.reuse, R56 ;idx: 377; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R88, R188, R206.reuse, R88 ;idx: 378; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R120, R190.reuse, R206, R120 ;idx: 379; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R124, R190, R207.reuse, R124 ;idx: 380; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R92, R188, R207.reuse, R92 ;idx: 381; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R60, R186, R207.reuse, R60 ;idx: 382; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R28, R184, R207, R28 ;idx: 383; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R0, R176, R192.reuse, R0 ;idx: 384; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R184, [R167+UR8+0xc00] ;idx: 385; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R32, R178, R192.reuse, R32 ;idx: 386; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R200, [R172+UR8+0x2000] ;idx: 387; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R64, R180, R192.reuse, R64 ;idx: 388; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R188, [R168+UR8+0xc00] ;idx: 389; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R96, R182.reuse, R192, R96 ;idx: 390; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R204, [R172+UR8+0x2800] ;idx: 391; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R100, R182, R193.reuse, R100 ;idx: 392; func: 4
+
+[NVBit Fault Injector] ULOP3.LUT UR8, UR8, 0x4000, URZ, 0x3c, !UPT ;idx: 393; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R68, R180, R193.reuse, R68 ;idx: 394; func: 4
+
+[NVBit Fault Injector] STS.128 [R129], R132 ;idx: 395; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R36, R178, R193.reuse, R36 ;idx: 396; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x1000], R136 ;idx: 397; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R4, R176.reuse, R193, R4 ;idx: 398; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x800], R140 ;idx: 399; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R8, R176, R194.reuse, R8 ;idx: 400; func: 4
+
+[NVBit Fault Injector] STS.128 [R129+0x1800], R144 ;idx: 401; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R40, R178, R194.reuse, R40 ;idx: 402; func: 4
+
+[NVBit Fault Injector] STS.128 [R166], R148 ;idx: 403; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R72, R180, R194.reuse, R72 ;idx: 404; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x800], R152 ;idx: 405; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R104, R182.reuse, R194, R104 ;idx: 406; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x1000], R156 ;idx: 407; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R108, R182, R195.reuse, R108 ;idx: 408; func: 4
+
+[NVBit Fault Injector] STS.128 [R166+0x1800], R160 ;idx: 409; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R76, R180, R195.reuse, R76 ;idx: 410; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R129, R129, 0x4000, RZ, 0x3c, !PT ;idx: 411; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R44, R178, R195.reuse, R44 ;idx: 412; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R166, R166, 0x4000, RZ, 0x3c, !PT ;idx: 413; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R12, R176.reuse, R195, R12 ;idx: 414; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 415; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R16, R176, R196.reuse, R16 ;idx: 416; func: 4
+
+[NVBit Fault Injector] R2P PR, R173, 0x78 ;idx: 417; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R48, R178, R196.reuse, R48 ;idx: 418; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R80, R180, R196.reuse, R80 ;idx: 419; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R132, [R130], P3 ;idx: 420; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R112, R182.reuse, R196, R112 ;idx: 421; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R136, [R130+0x80], P4 ;idx: 422; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R116, R182, R197.reuse, R116 ;idx: 423; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x178], RZ ;idx: 424; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R84, R180, R197.reuse, R84 ;idx: 425; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x17c], RZ, P2, !PT ;idx: 426; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R52, R178, R197.reuse, R52 ;idx: 427; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R140, [R130], P5 ;idx: 428; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R20, R176.reuse, R197, R20 ;idx: 429; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R144, [R130+0x80], P6 ;idx: 430; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R24, R176, R198.reuse, R24 ;idx: 431; func: 4
+
+[NVBit Fault Injector] IADD3 R130, P2, R130, c[0x0][0x188], RZ ;idx: 432; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R56, R178, R198.reuse, R56 ;idx: 433; func: 4
+
+[NVBit Fault Injector] IADD3.X R131, R131, c[0x0][0x18c], RZ, P2, !PT ;idx: 434; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R88, R180, R198.reuse, R88 ;idx: 435; func: 4
+
+[NVBit Fault Injector] R2P PR, R173.B1, 0x78 ;idx: 436; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R120, R182.reuse, R198, R120 ;idx: 437; func: 4
+
+[NVBit Fault Injector] IADD3 R174, R174, -0x20, RZ ;idx: 438; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R124, R182, R199.reuse, R124 ;idx: 439; func: 4
+
+[NVBit Fault Injector] ISETP.GE.AND P0, PT, R174, 0x20, PT ;idx: 440; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R92, R180, R199.reuse, R92 ;idx: 441; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R148, [R164], P3 ;idx: 442; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R60, R178, R199.reuse, R60 ;idx: 443; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 444; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R28, R176, R199, R28 ;idx: 445; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 446; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R0, R184, R200.reuse, R0 ;idx: 447; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R176, [R167+UR8] ;idx: 448; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R32, R186, R200.reuse, R32 ;idx: 449; func: 4
+
+[NVBit Fault Injector] LDSM.16.MT88.4 R180, [R168+UR8] ;idx: 450; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R64, R188, R200.reuse, R64 ;idx: 451; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R192, [R169+UR8+0x2000] ;idx: 452; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R96, R190.reuse, R200, R96 ;idx: 453; func: 4
+
+[NVBit Fault Injector] LDSM.16.M88.4 R196, [R169+UR8+0x2800] ;idx: 454; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R100, R190, R201.reuse, R100 ;idx: 455; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R152, [R164], P4 ;idx: 456; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R68, R188, R201.reuse, R68 ;idx: 457; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 458; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R36, R186, R201.reuse, R36 ;idx: 459; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 460; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R4, R184.reuse, R201, R4 ;idx: 461; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R156, [R164], P5 ;idx: 462; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R8, R184, R202.reuse, R8 ;idx: 463; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x180], RZ ;idx: 464; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R40, R186, R202.reuse, R40 ;idx: 465; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x184], RZ, P2, !PT ;idx: 466; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R72, R188, R202.reuse, R72 ;idx: 467; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.128.CONSTANT R160, [R164], P6 ;idx: 468; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R104, R190.reuse, R202, R104 ;idx: 469; func: 4
+
+[NVBit Fault Injector] IADD3 R164, P2, R164, c[0x0][0x190], RZ ;idx: 470; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R108, R190, R203.reuse, R108 ;idx: 471; func: 4
+
+[NVBit Fault Injector] IADD3.X R165, R165, c[0x0][0x194], RZ, P2, !PT ;idx: 472; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R76, R188, R203.reuse, R76 ;idx: 473; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R44, R186, R203.reuse, R44 ;idx: 474; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R12, R184.reuse, R203, R12 ;idx: 475; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R16, R184, R204.reuse, R16 ;idx: 476; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R48, R186, R204.reuse, R48 ;idx: 477; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R80, R188, R204.reuse, R80 ;idx: 478; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R112, R190.reuse, R204, R112 ;idx: 479; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R116, R190, R205.reuse, R116 ;idx: 480; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R84, R188, R205.reuse, R84 ;idx: 481; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R52, R186, R205.reuse, R52 ;idx: 482; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R20, R184.reuse, R205, R20 ;idx: 483; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R24, R184, R206.reuse, R24 ;idx: 484; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R56, R186, R206.reuse, R56 ;idx: 485; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R88, R188, R206.reuse, R88 ;idx: 486; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R120, R190.reuse, R206, R120 ;idx: 487; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R124, R190, R207.reuse, R124 ;idx: 488; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R92, R188, R207.reuse, R92 ;idx: 489; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R60, R186, R207.reuse, R60 ;idx: 490; func: 4
+
+[NVBit Fault Injector] HMMA.1688.F32.BF16 R28, R184, R207, R28 ;idx: 491; func: 4
+
+[NVBit Fault Injector] @P0 BRA.U 0x1380 ;idx: 492; func: 4
+
+[NVBit Fault Injector] ISETP.GT.AND P0, PT, R174, -0x40, PT ;idx: 493; func: 4
+
+[NVBit Fault Injector] @!P0 BRA.U 0x1f10 ;idx: 494; func: 4
+
+[NVBit Fault Injector] MOV R173, RZ ;idx: 495; func: 4
+
+[NVBit Fault Injector] BRA.U 0x1380 ;idx: 496; func: 4
+
+[NVBit Fault Injector] ISETP.NE.AND P0, PT, RZ, c[0x0][0x200], PT ;idx: 497; func: 4
+
+[NVBit Fault Injector] MOV R146, c[0x0][0x1e8] ;idx: 498; func: 4
+
+[NVBit Fault Injector] MOV R147, c[0x0][0x1ec] ;idx: 499; func: 4
+
+[NVBit Fault Injector] MOV R137, c[0x0][0x1e4] ;idx: 500; func: 4
+
+[NVBit Fault Injector] S2R R133, SR_TID.X ;idx: 501; func: 4
+
+[NVBit Fault Injector] S2R R134, SR_CTAID.X ;idx: 502; func: 4
+
+[NVBit Fault Injector] S2R R135, SR_CTAID.Y ;idx: 503; func: 4
+
+[NVBit Fault Injector] S2R R136, SR_CTAID.Z ;idx: 504; func: 4
+
+[NVBit Fault Injector] @P0 LDG.E.LTC128B.CONSTANT R145, [R146] ;idx: 505; func: 4
+
+[NVBit Fault Injector] FSETP.NE.AND P1, PT, R128, RZ, PT ;idx: 506; func: 4
+
+[NVBit Fault Injector] @!P0 MOV R145, c[0x0][0x1f8] ;idx: 507; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 508; func: 4
+
+[NVBit Fault Injector] MOV R147, RZ ;idx: 509; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R151, R137, 0xf00, RZ, 0xc0, !PT ;idx: 510; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P5, RZ, R137, 0x1000, RZ, 0xc0, !PT ;idx: 511; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R151, RZ, 0x8, R151 ;idx: 512; func: 4
+
+[NVBit Fault Injector] BMSK R152, R151, 0x1 ;idx: 513; func: 4
+
+[NVBit Fault Injector] BMSK R153, RZ, R151 ;idx: 514; func: 4
+
+[NVBit Fault Injector] PLOP3.LUT P4, PT, PT, PT, PT, 0x2, 0x20 ;idx: 515; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R154, R135, R153, RZ, 0xfc, !PT ;idx: 516; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R153, 0x3, PT ;idx: 517; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P2, PT, R154, c[0x0][0x10], PT ;idx: 518; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R155, R135.reuse, R153.reuse, RZ, 0xc0, !PT ;idx: 519; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R158, R135, R152, RZ, 0xc0, !PT ;idx: 520; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R154, c[0x0][0x10], P3 ;idx: 521; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R156, R135.reuse, R153, RZ, 0x30, !PT ;idx: 522; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R157, R155, c[0x0][0xc], R134 ;idx: 523; func: 4
+
+[NVBit Fault Injector] @P5 ISETP.EQ.XOR P4, PT, R158, R152, P4 ;idx: 524; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R152, RZ, 0x1, R152 ;idx: 525; func: 4
+
+[NVBit Fault Injector] @P2 BRA 0x2180 ;idx: 526; func: 4
+
+[NVBit Fault Injector] @!P3 SHF.R.U32.HI R153, RZ, 0x1, R153 ;idx: 527; func: 4
+
+[NVBit Fault Injector] @!P3 IADD3 R151, R151, -0x1, RZ ;idx: 528; func: 4
+
+[NVBit Fault Injector] @!P3 BRA 0x2040 ;idx: 529; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R160, R157, 0x55555556, RZ ;idx: 530; func: 4
+
+[NVBit Fault Injector] IADD3 R135, R156, R157, RZ ;idx: 531; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R135, R161, -0x3, R135 ;idx: 532; func: 4
+
+[NVBit Fault Injector] @!P4 MOV R134, R161 ;idx: 533; func: 4
+
+[NVBit Fault Injector] @P4 IADD3.X R134, ~R161, c[0x0][0xc], RZ, !PT, !PT ;idx: 534; func: 4
+
+[NVBit Fault Injector] BRA 0x21b0 ;idx: 535; func: 4
+
+[NVBit Fault Injector] SHF.R.U32.HI R134, RZ, R151, R157 ;idx: 536; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R135, R156, R157, R153, 0xf8, !PT ;idx: 537; func: 4
+
+[NVBit Fault Injector] @P4 IADD3.X R134, ~R134, c[0x0][0xc], RZ, !PT, !PT ;idx: 538; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x3, RZ, 0xc0, !PT ;idx: 539; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R129, R153, 0x5, RZ ;idx: 540; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R153, RZ, 0x2, R133 ;idx: 541; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R153, 0x7, RZ, 0xc0, !PT ;idx: 542; func: 4
+
+[NVBit Fault Injector] LEA R129, R153, R129, 0x2 ;idx: 543; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R154, RZ, 0x5, R133 ;idx: 544; func: 4
+
+[NVBit Fault Injector] LEA R129, R154, R129, 0x8 ;idx: 545; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x3, RZ, 0xc0, !PT ;idx: 546; func: 4
+
+[NVBit Fault Injector] LEA R129, R153, R129, 0xc ;idx: 547; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0xf, RZ, 0xc0, !PT ;idx: 548; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R132, R153, 0x4, RZ ;idx: 549; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R151, R153, 0x2, RZ ;idx: 550; func: 4
+
+[NVBit Fault Injector] LEA R132, R154, R132, 0x8 ;idx: 551; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x1f, RZ, 0xc0, !PT ;idx: 552; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R153, RZ, 0x5, R153 ;idx: 553; func: 4
+
+[NVBit Fault Injector] SHF.L.U32 R155, R153, 0x5, RZ ;idx: 554; func: 4
+
+[NVBit Fault Injector] IADD3 R132, R132, R155, RZ ;idx: 555; func: 4
+
+[NVBit Fault Injector] LEA R132, R153, R132, 0xc ;idx: 556; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x10, RZ, 0xc0, !PT ;idx: 557; func: 4
+
+[NVBit Fault Injector] LEA R132, R153, R132, 0x6 ;idx: 558; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x1f, RZ, 0xc0, !PT ;idx: 559; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R152, RZ, 0x4, R153 ;idx: 560; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R153, R133, 0x7f, RZ, 0xc0, !PT ;idx: 561; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R156, RZ, 0x5, R153.reuse ;idx: 562; func: 4
+
+[NVBit Fault Injector] SHF.R.S32.HI R157, RZ, 0x6, R153.reuse ;idx: 563; func: 4
+
+[NVBit Fault Injector] LOP3.LUT R156, R156, 0x1, RZ, 0xc0, !PT ;idx: 564; func: 4
+
+[NVBit Fault Injector] LEA R150, R135, R152, 0x7 ;idx: 565; func: 4
+
+[NVBit Fault Injector] MOV R144, c[0x0][0x1c4] ;idx: 566; func: 4
+
+[NVBit Fault Injector] MOV R143, c[0x0][0x1c0] ;idx: 567; func: 4
+
+[NVBit Fault Injector] LEA R146, R134, R151, 0x7 ;idx: 568; func: 4
+
+[NVBit Fault Injector] LEA R150, R157, R150, 0x6 ;idx: 569; func: 4
+
+[NVBit Fault Injector] LEA R146, R156, R146, 0x6 ;idx: 570; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P2, RZ, R137, 0x8, RZ, 0xc0, !PT ;idx: 571; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R152, R150, c[0x0][0x1c0], R146 ;idx: 572; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P6, R151, R137, 0x3, RZ, 0xc0, !PT ;idx: 573; func: 4
+
+[NVBit Fault Injector] @!P6 BRA.U 0x24c0 ;idx: 574; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R151, 0x2, PT ;idx: 575; func: 4
+
+[NVBit Fault Injector] @P3 LEA R140, P4, R136.reuse, c[0x0][0x170], 0x3 ;idx: 576; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R141, R136, c[0x0][0x174], RZ, 0x3, P4 ;idx: 577; func: 4
+
+[NVBit Fault Injector] @P3 LDG.E.LTC128B.64.CONSTANT R154, [R140] ;idx: 578; func: 4
+
+[NVBit Fault Injector] @P3 LEA R140, P4, R152.reuse, R154, 0x1 ;idx: 579; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R141, R152, R155, R153, 0x1, P4 ;idx: 580; func: 4
+
+[NVBit Fault Injector] @!P3 LEA R140, P4, R152.reuse, c[0x0][0x170], 0x1 ;idx: 581; func: 4
+
+[NVBit Fault Injector] @!P3 LEA.HI.X R141, R152, c[0x0][0x174], R153, 0x1, P4 ;idx: 582; func: 4
+
+[NVBit Fault Injector] @!P3 IMAD.WIDE.U32 R154, R136, c[0x0][0x1a8], RZ ;idx: 583; func: 4
+
+[NVBit Fault Injector] @!P3 IMAD.U32 R155, R136, c[0x0][0x1ac], R155 ;idx: 584; func: 4
+
+[NVBit Fault Injector] @!P3 LEA R140, P4, R154.reuse, R140, 0x1 ;idx: 585; func: 4
+
+[NVBit Fault Injector] @!P3 LEA.HI.X R141, R154, R141, R155, 0x1, P4 ;idx: 586; func: 4
+
+[NVBit Fault Injector] BRA.U 0x24e0 ;idx: 587; func: 4
+
+[NVBit Fault Injector] LEA R140, P4, R152.reuse, c[0x0][0x170], 0x1 ;idx: 588; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R141, R152, c[0x0][0x174], R153, 0x1, P4 ;idx: 589; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P3, RZ, R137, 0x20, RZ, 0xc0, !PT ;idx: 590; func: 4
+
+[NVBit Fault Injector] @P3 IMAD.WIDE.U32 R154, R136, c[0x0][0x1a8], RZ ;idx: 591; func: 4
+
+[NVBit Fault Injector] @P3 IMAD.U32 R155, R136, c[0x0][0x1ac], R155 ;idx: 592; func: 4
+
+[NVBit Fault Injector] @P3 LEA R140, P4, R154.reuse, R140, 0x1 ;idx: 593; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R141, R154, R141, R153, 0x1, P4 ;idx: 594; func: 4
+
+[NVBit Fault Injector] ISETP.NE.AND P5, PT, R136, RZ, P2 ;idx: 595; func: 4
+
+[NVBit Fault Injector] MOV R138, c[0x0][0x170] ;idx: 596; func: 4
+
+[NVBit Fault Injector] MOV R139, c[0x0][0x174] ;idx: 597; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P4, PT, R138, c[0x0][0x208], PT ;idx: 598; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P4, PT, R139, c[0x0][0x20c], P4 ;idx: 599; func: 4
+
+[NVBit Fault Injector] PLOP3.LUT P4, PT, P4, P5, PT, 0xf8, 0x8f ;idx: 600; func: 4
+
+[NVBit Fault Injector] @P5 MOV R144, R143 ;idx: 601; func: 4
+
+[NVBit Fault Injector] @!P4 BRA.U 0x25e0 ;idx: 602; func: 4
+
+[NVBit Fault Injector] MOV R138, R140 ;idx: 603; func: 4
+
+[NVBit Fault Injector] MOV R139, R141 ;idx: 604; func: 4
+
+[NVBit Fault Injector] BRA.U 0x2750 ;idx: 605; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P6, R151, R137, 0x3, RZ, 0xc0, !PT ;idx: 606; func: 4
+
+[NVBit Fault Injector] IMAD.WIDE.U32 R152, R150, c[0x0][0x1c4], R146 ;idx: 607; func: 4
+
+[NVBit Fault Injector] @!P6 BRA.U 0x26e0 ;idx: 608; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P3, PT, R151, 0x2, PT ;idx: 609; func: 4
+
+[NVBit Fault Injector] @P3 LEA R138, P4, R136.reuse, c[0x0][0x208], 0x3 ;idx: 610; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R139, R136, c[0x0][0x20c], RZ, 0x3, P4 ;idx: 611; func: 4
+
+[NVBit Fault Injector] @P3 LDG.E.LTC128B.64.CONSTANT R154, [R138] ;idx: 612; func: 4
+
+[NVBit Fault Injector] @P3 LEA R138, P4, R152.reuse, R154, 0x1 ;idx: 613; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R139, R152, R155, R153, 0x1, P4 ;idx: 614; func: 4
+
+[NVBit Fault Injector] @!P3 LEA R138, P4, R152.reuse, c[0x0][0x208], 0x1 ;idx: 615; func: 4
+
+[NVBit Fault Injector] @!P3 LEA.HI.X R139, R152, c[0x0][0x20c], R153, 0x1, P4 ;idx: 616; func: 4
+
+[NVBit Fault Injector] @!P3 IMAD.WIDE.U32 R154, R136, c[0x0][0x1b0], RZ ;idx: 617; func: 4
+
+[NVBit Fault Injector] @!P3 IMAD.U32 R155, R136, c[0x0][0x1b4], R155 ;idx: 618; func: 4
+
+[NVBit Fault Injector] @!P3 LEA R138, P4, R154.reuse, R138, 0x1 ;idx: 619; func: 4
+
+[NVBit Fault Injector] @!P3 LEA.HI.X R139, R154, R139, R155, 0x1, P4 ;idx: 620; func: 4
+
+[NVBit Fault Injector] BRA.U 0x2700 ;idx: 621; func: 4
+
+[NVBit Fault Injector] LEA R138, P4, R152.reuse, c[0x0][0x208], 0x1 ;idx: 622; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R139, R152, c[0x0][0x20c], R153, 0x1, P4 ;idx: 623; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P3, RZ, R137, 0x20, RZ, 0xc0, !PT ;idx: 624; func: 4
+
+[NVBit Fault Injector] @P3 IMAD.WIDE.U32 R154, R136, c[0x0][0x1b0], RZ ;idx: 625; func: 4
+
+[NVBit Fault Injector] @P3 IMAD.U32 R155, R136, c[0x0][0x1b4], R155 ;idx: 626; func: 4
+
+[NVBit Fault Injector] @P3 LEA R138, P4, R154.reuse, R138, 0x1 ;idx: 627; func: 4
+
+[NVBit Fault Injector] @P3 LEA.HI.X R139, R154, R139, R153, 0x1, P4 ;idx: 628; func: 4
+
+[NVBit Fault Injector] @P5 MOV R128, 0x3f800000 ;idx: 629; func: 4
+
+[NVBit Fault Injector] @P5 PLOP3.LUT P1, PT, PT, PT, PT, 0x80, 0x8 ;idx: 630; func: 4
+
+[NVBit Fault Injector] IADD3 R148, R146, -c[0x0][0x1c8], RZ ;idx: 631; func: 4
+
+[NVBit Fault Injector] IADD3 R149, R150, -c[0x0][0x1cc], RZ ;idx: 632; func: 4
+
+[NVBit Fault Injector] @!P2 BRA 0x2810 ;idx: 633; func: 4
+
+[NVBit Fault Injector] IMAD.U32 R218, R135, c[0x0][0xc], R134 ;idx: 634; func: 4
+
+[NVBit Fault Injector] LEA R216, P2, R218.reuse, c[0x0][0x1d8], 0x2 ;idx: 635; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R217, R218, c[0x0][0x1dc], RZ, 0x2, P2 ;idx: 636; func: 4
+
+[NVBit Fault Injector] MOV R151, RZ ;idx: 637; func: 4
+
+[NVBit Fault Injector] ISETP.NE.AND P2, PT, R151, R136, PT ;idx: 638; func: 4
+
+[NVBit Fault Injector] @P2 LDG.E.EL.LTC128B.STRONG.GPU R151, [R216] ;idx: 639; func: 4
+
+[NVBit Fault Injector] @P2 BRA.U 0x27e0 ;idx: 640; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P2, PT, R148, 0x0, PT ;idx: 641; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, 0x0, P2 ;idx: 642; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0x2, P2 ;idx: 643; func: 4
+
+[NVBit Fault Injector] P2R R142, PR, RZ, 0x78 ;idx: 644; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0x4, P2 ;idx: 645; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0x6, P2 ;idx: 646; func: 4
+
+[NVBit Fault Injector] P2R.B1 R142, PR, R142, 0x78 ;idx: 647; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0x8, P2 ;idx: 648; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0xa, P2 ;idx: 649; func: 4
+
+[NVBit Fault Injector] P2R.B2 R142, PR, R142, 0x78 ;idx: 650; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0xc, P2 ;idx: 651; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149, -0xe, P2 ;idx: 652; func: 4
+
+[NVBit Fault Injector] P2R.B3 R142, PR, R142, 0x78 ;idx: 653; func: 4
+
+[NVBit Fault Injector] @!P1 BRA.U 0x2ab0 ;idx: 654; func: 4
+
+[NVBit Fault Injector] R2P PR, R142, 0x78 ;idx: 655; func: 4
+
+[NVBit Fault Injector] LEA R134, P2, R144.reuse, R138, 0x2 ;idx: 656; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R135, R144, R139, RZ, 0x2, P2 ;idx: 657; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R152, [R138], P3 ;idx: 658; func: 4
+
+[NVBit Fault Injector] LEA R218, P2, R144.reuse, R134, 0x2 ;idx: 659; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R219, R144, R135, RZ, 0x2, P2 ;idx: 660; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R154, [R134], P4 ;idx: 661; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B1, 0x78 ;idx: 662; func: 4
+
+[NVBit Fault Injector] LEA R220, P2, R144.reuse, R218, 0x2 ;idx: 663; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R221, R144, R219, RZ, 0x2, P2 ;idx: 664; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R156, [R218], P3 ;idx: 665; func: 4
+
+[NVBit Fault Injector] LEA R222, P2, R144.reuse, R220, 0x2 ;idx: 666; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R223, R144, R221, RZ, 0x2, P2 ;idx: 667; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R158, [R220], P4 ;idx: 668; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B2, 0x78 ;idx: 669; func: 4
+
+[NVBit Fault Injector] LEA R224, P2, R144.reuse, R222, 0x2 ;idx: 670; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R225, R144, R223, RZ, 0x2, P2 ;idx: 671; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R160, [R222], P3 ;idx: 672; func: 4
+
+[NVBit Fault Injector] LEA R226, P2, R144.reuse, R224, 0x2 ;idx: 673; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R227, R144, R225, RZ, 0x2, P2 ;idx: 674; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R162, [R224], P4 ;idx: 675; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B3, 0x78 ;idx: 676; func: 4
+
+[NVBit Fault Injector] LEA R228, P2, R144.reuse, R226, 0x2 ;idx: 677; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R229, R144, R227, RZ, 0x2, P2 ;idx: 678; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R164, [R226], P3 ;idx: 679; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R166, [R228], P4 ;idx: 680; func: 4
+
+[NVBit Fault Injector] LEA R138, P2, R144.reuse, R138, 0x5 ;idx: 681; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R139, R144, R139, RZ, 0x5, P2 ;idx: 682; func: 4
+
+[NVBit Fault Injector] PLOP3.LUT P0, PT, P1, P1, PT, 0x80, 0x8 ;idx: 683; func: 4
+
+[NVBit Fault Injector] Found function with FMUL instruction; func: 4
+
+[NVBit Fault Injector] FMUL R184, R145.reuse, R0 ;idx: 684; func: 4
+
+[NVBit Fault Injector] FMUL R185, R145.reuse, R2 ;idx: 685; func: 4
+
+[NVBit Fault Injector] FMUL R186, R145.reuse, R32 ;idx: 686; func: 4
+
+[NVBit Fault Injector] FMUL R187, R145.reuse, R34 ;idx: 687; func: 4
+
+[NVBit Fault Injector] FMUL R188, R145.reuse, R64 ;idx: 688; func: 4
+
+[NVBit Fault Injector] FMUL R189, R145.reuse, R66 ;idx: 689; func: 4
+
+[NVBit Fault Injector] FMUL R190, R145.reuse, R96 ;idx: 690; func: 4
+
+[NVBit Fault Injector] FMUL R191, R145.reuse, R98 ;idx: 691; func: 4
+
+[NVBit Fault Injector] FMUL R192, R145.reuse, R1 ;idx: 692; func: 4
+
+[NVBit Fault Injector] FMUL R193, R145.reuse, R3 ;idx: 693; func: 4
+
+[NVBit Fault Injector] FMUL R194, R145.reuse, R33 ;idx: 694; func: 4
+
+[NVBit Fault Injector] FMUL R195, R145.reuse, R35 ;idx: 695; func: 4
+
+[NVBit Fault Injector] FMUL R196, R145.reuse, R65 ;idx: 696; func: 4
+
+[NVBit Fault Injector] FMUL R197, R145.reuse, R67 ;idx: 697; func: 4
+
+[NVBit Fault Injector] FMUL R198, R145.reuse, R97 ;idx: 698; func: 4
+
+[NVBit Fault Injector] FMUL R199, R145.reuse, R99 ;idx: 699; func: 4
+
+[NVBit Fault Injector] FMUL R200, R145.reuse, R4 ;idx: 700; func: 4
+
+[NVBit Fault Injector] FMUL R201, R145.reuse, R6 ;idx: 701; func: 4
+
+[NVBit Fault Injector] FMUL R202, R145.reuse, R36 ;idx: 702; func: 4
+
+[NVBit Fault Injector] FMUL R203, R145.reuse, R38 ;idx: 703; func: 4
+
+[NVBit Fault Injector] FMUL R204, R145.reuse, R68 ;idx: 704; func: 4
+
+[NVBit Fault Injector] FMUL R205, R145.reuse, R70 ;idx: 705; func: 4
+
+[NVBit Fault Injector] FMUL R206, R145.reuse, R100 ;idx: 706; func: 4
+
+[NVBit Fault Injector] FMUL R207, R145.reuse, R102 ;idx: 707; func: 4
+
+[NVBit Fault Injector] FMUL R208, R145.reuse, R5 ;idx: 708; func: 4
+
+[NVBit Fault Injector] FMUL R209, R145.reuse, R7 ;idx: 709; func: 4
+
+[NVBit Fault Injector] FMUL R210, R145.reuse, R37 ;idx: 710; func: 4
+
+[NVBit Fault Injector] FMUL R211, R145.reuse, R39 ;idx: 711; func: 4
+
+[NVBit Fault Injector] FMUL R212, R145.reuse, R69 ;idx: 712; func: 4
+
+[NVBit Fault Injector] FMUL R213, R145.reuse, R71 ;idx: 713; func: 4
+
+[NVBit Fault Injector] FMUL R214, R145.reuse, R101 ;idx: 714; func: 4
+
+[NVBit Fault Injector] FMUL R215, R145, R103 ;idx: 715; func: 4
+
+[NVBit Fault Injector] IADD3 R149, R149, 0x10, RZ ;idx: 716; func: 4
+
+[NVBit Fault Injector] LEPC R130 ;idx: 717; func: 4
+
+[NVBit Fault Injector] CALL.REL 0x3490 ;idx: 718; func: 4
+
+[NVBit Fault Injector] LEA R140, P2, R143.reuse, R140, 0x5 ;idx: 719; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R141, R143, R141, RZ, 0x5, P2 ;idx: 720; func: 4
+
+[NVBit Fault Injector] LEA R138, P2, R144.reuse, R138, 0x5 ;idx: 721; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R139, R144, R139, RZ, 0x5, P2 ;idx: 722; func: 4
+
+[NVBit Fault Injector] FMUL R184, R145.reuse, R8 ;idx: 723; func: 4
+
+[NVBit Fault Injector] FMUL R185, R145.reuse, R10 ;idx: 724; func: 4
+
+[NVBit Fault Injector] FMUL R186, R145.reuse, R40 ;idx: 725; func: 4
+
+[NVBit Fault Injector] FMUL R187, R145.reuse, R42 ;idx: 726; func: 4
+
+[NVBit Fault Injector] FMUL R188, R145.reuse, R72 ;idx: 727; func: 4
+
+[NVBit Fault Injector] FMUL R189, R145.reuse, R74 ;idx: 728; func: 4
+
+[NVBit Fault Injector] FMUL R190, R145.reuse, R104 ;idx: 729; func: 4
+
+[NVBit Fault Injector] FMUL R191, R145.reuse, R106 ;idx: 730; func: 4
+
+[NVBit Fault Injector] FMUL R192, R145.reuse, R9 ;idx: 731; func: 4
+
+[NVBit Fault Injector] FMUL R193, R145.reuse, R11 ;idx: 732; func: 4
+
+[NVBit Fault Injector] FMUL R194, R145.reuse, R41 ;idx: 733; func: 4
+
+[NVBit Fault Injector] FMUL R195, R145.reuse, R43 ;idx: 734; func: 4
+
+[NVBit Fault Injector] FMUL R196, R145.reuse, R73 ;idx: 735; func: 4
+
+[NVBit Fault Injector] FMUL R197, R145.reuse, R75 ;idx: 736; func: 4
+
+[NVBit Fault Injector] FMUL R198, R145.reuse, R105 ;idx: 737; func: 4
+
+[NVBit Fault Injector] FMUL R199, R145.reuse, R107 ;idx: 738; func: 4
+
+[NVBit Fault Injector] FMUL R200, R145.reuse, R12 ;idx: 739; func: 4
+
+[NVBit Fault Injector] FMUL R201, R145.reuse, R14 ;idx: 740; func: 4
+
+[NVBit Fault Injector] FMUL R202, R145.reuse, R44 ;idx: 741; func: 4
+
+[NVBit Fault Injector] FMUL R203, R145.reuse, R46 ;idx: 742; func: 4
+
+[NVBit Fault Injector] FMUL R204, R145.reuse, R76 ;idx: 743; func: 4
+
+[NVBit Fault Injector] FMUL R205, R145.reuse, R78 ;idx: 744; func: 4
+
+[NVBit Fault Injector] FMUL R206, R145.reuse, R108 ;idx: 745; func: 4
+
+[NVBit Fault Injector] FMUL R207, R145.reuse, R110 ;idx: 746; func: 4
+
+[NVBit Fault Injector] FMUL R208, R145.reuse, R13 ;idx: 747; func: 4
+
+[NVBit Fault Injector] FMUL R209, R145.reuse, R15 ;idx: 748; func: 4
+
+[NVBit Fault Injector] FMUL R210, R145.reuse, R45 ;idx: 749; func: 4
+
+[NVBit Fault Injector] FMUL R211, R145.reuse, R47 ;idx: 750; func: 4
+
+[NVBit Fault Injector] FMUL R212, R145.reuse, R77 ;idx: 751; func: 4
+
+[NVBit Fault Injector] FMUL R213, R145.reuse, R79 ;idx: 752; func: 4
+
+[NVBit Fault Injector] FMUL R214, R145.reuse, R109 ;idx: 753; func: 4
+
+[NVBit Fault Injector] FMUL R215, R145, R111 ;idx: 754; func: 4
+
+[NVBit Fault Injector] IADD3 R149, R149, 0x10, RZ ;idx: 755; func: 4
+
+[NVBit Fault Injector] LEPC R130 ;idx: 756; func: 4
+
+[NVBit Fault Injector] CALL.REL 0x3490 ;idx: 757; func: 4
+
+[NVBit Fault Injector] LEA R140, P2, R143.reuse, R140, 0x5 ;idx: 758; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R141, R143, R141, RZ, 0x5, P2 ;idx: 759; func: 4
+
+[NVBit Fault Injector] LEA R138, P2, R144.reuse, R138, 0x5 ;idx: 760; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R139, R144, R139, RZ, 0x5, P2 ;idx: 761; func: 4
+
+[NVBit Fault Injector] FMUL R184, R145.reuse, R16 ;idx: 762; func: 4
+
+[NVBit Fault Injector] FMUL R185, R145.reuse, R18 ;idx: 763; func: 4
+
+[NVBit Fault Injector] FMUL R186, R145.reuse, R48 ;idx: 764; func: 4
+
+[NVBit Fault Injector] FMUL R187, R145.reuse, R50 ;idx: 765; func: 4
+
+[NVBit Fault Injector] FMUL R188, R145.reuse, R80 ;idx: 766; func: 4
+
+[NVBit Fault Injector] FMUL R189, R145.reuse, R82 ;idx: 767; func: 4
+
+[NVBit Fault Injector] FMUL R190, R145.reuse, R112 ;idx: 768; func: 4
+
+[NVBit Fault Injector] FMUL R191, R145.reuse, R114 ;idx: 769; func: 4
+
+[NVBit Fault Injector] FMUL R192, R145.reuse, R17 ;idx: 770; func: 4
+
+[NVBit Fault Injector] FMUL R193, R145.reuse, R19 ;idx: 771; func: 4
+
+[NVBit Fault Injector] FMUL R194, R145.reuse, R49 ;idx: 772; func: 4
+
+[NVBit Fault Injector] FMUL R195, R145.reuse, R51 ;idx: 773; func: 4
+
+[NVBit Fault Injector] FMUL R196, R145.reuse, R81 ;idx: 774; func: 4
+
+[NVBit Fault Injector] FMUL R197, R145.reuse, R83 ;idx: 775; func: 4
+
+[NVBit Fault Injector] FMUL R198, R145.reuse, R113 ;idx: 776; func: 4
+
+[NVBit Fault Injector] FMUL R199, R145.reuse, R115 ;idx: 777; func: 4
+
+[NVBit Fault Injector] FMUL R200, R145.reuse, R20 ;idx: 778; func: 4
+
+[NVBit Fault Injector] FMUL R201, R145.reuse, R22 ;idx: 779; func: 4
+
+[NVBit Fault Injector] FMUL R202, R145.reuse, R52 ;idx: 780; func: 4
+
+[NVBit Fault Injector] FMUL R203, R145.reuse, R54 ;idx: 781; func: 4
+
+[NVBit Fault Injector] FMUL R204, R145.reuse, R84 ;idx: 782; func: 4
+
+[NVBit Fault Injector] FMUL R205, R145.reuse, R86 ;idx: 783; func: 4
+
+[NVBit Fault Injector] FMUL R206, R145.reuse, R116 ;idx: 784; func: 4
+
+[NVBit Fault Injector] FMUL R207, R145.reuse, R118 ;idx: 785; func: 4
+
+[NVBit Fault Injector] FMUL R208, R145.reuse, R21 ;idx: 786; func: 4
+
+[NVBit Fault Injector] FMUL R209, R145.reuse, R23 ;idx: 787; func: 4
+
+[NVBit Fault Injector] FMUL R210, R145.reuse, R53 ;idx: 788; func: 4
+
+[NVBit Fault Injector] FMUL R211, R145.reuse, R55 ;idx: 789; func: 4
+
+[NVBit Fault Injector] FMUL R212, R145.reuse, R85 ;idx: 790; func: 4
+
+[NVBit Fault Injector] FMUL R213, R145.reuse, R87 ;idx: 791; func: 4
+
+[NVBit Fault Injector] FMUL R214, R145.reuse, R117 ;idx: 792; func: 4
+
+[NVBit Fault Injector] FMUL R215, R145, R119 ;idx: 793; func: 4
+
+[NVBit Fault Injector] IADD3 R149, R149, 0x10, RZ ;idx: 794; func: 4
+
+[NVBit Fault Injector] LEPC R130 ;idx: 795; func: 4
+
+[NVBit Fault Injector] CALL.REL 0x3490 ;idx: 796; func: 4
+
+[NVBit Fault Injector] LEA R140, P2, R143.reuse, R140, 0x5 ;idx: 797; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R141, R143, R141, RZ, 0x5, P2 ;idx: 798; func: 4
+
+[NVBit Fault Injector] PLOP3.LUT P0, PT, PT, PT, PT, 0x20, 0x2 ;idx: 799; func: 4
+
+[NVBit Fault Injector] FMUL R184, R145.reuse, R24 ;idx: 800; func: 4
+
+[NVBit Fault Injector] FMUL R185, R145.reuse, R26 ;idx: 801; func: 4
+
+[NVBit Fault Injector] FMUL R186, R145.reuse, R56 ;idx: 802; func: 4
+
+[NVBit Fault Injector] FMUL R187, R145.reuse, R58 ;idx: 803; func: 4
+
+[NVBit Fault Injector] FMUL R188, R145.reuse, R88 ;idx: 804; func: 4
+
+[NVBit Fault Injector] FMUL R189, R145.reuse, R90 ;idx: 805; func: 4
+
+[NVBit Fault Injector] FMUL R190, R145.reuse, R120 ;idx: 806; func: 4
+
+[NVBit Fault Injector] FMUL R191, R145.reuse, R122 ;idx: 807; func: 4
+
+[NVBit Fault Injector] FMUL R192, R145.reuse, R25 ;idx: 808; func: 4
+
+[NVBit Fault Injector] FMUL R193, R145.reuse, R27 ;idx: 809; func: 4
+
+[NVBit Fault Injector] FMUL R194, R145.reuse, R57 ;idx: 810; func: 4
+
+[NVBit Fault Injector] FMUL R195, R145.reuse, R59 ;idx: 811; func: 4
+
+[NVBit Fault Injector] FMUL R196, R145.reuse, R89 ;idx: 812; func: 4
+
+[NVBit Fault Injector] FMUL R197, R145.reuse, R91 ;idx: 813; func: 4
+
+[NVBit Fault Injector] FMUL R198, R145.reuse, R121 ;idx: 814; func: 4
+
+[NVBit Fault Injector] FMUL R199, R145.reuse, R123 ;idx: 815; func: 4
+
+[NVBit Fault Injector] FMUL R200, R145.reuse, R28 ;idx: 816; func: 4
+
+[NVBit Fault Injector] FMUL R201, R145.reuse, R30 ;idx: 817; func: 4
+
+[NVBit Fault Injector] FMUL R202, R145.reuse, R60 ;idx: 818; func: 4
+
+[NVBit Fault Injector] FMUL R203, R145.reuse, R62 ;idx: 819; func: 4
+
+[NVBit Fault Injector] FMUL R204, R145.reuse, R92 ;idx: 820; func: 4
+
+[NVBit Fault Injector] FMUL R205, R145.reuse, R94 ;idx: 821; func: 4
+
+[NVBit Fault Injector] FMUL R206, R145.reuse, R124 ;idx: 822; func: 4
+
+[NVBit Fault Injector] FMUL R207, R145.reuse, R126 ;idx: 823; func: 4
+
+[NVBit Fault Injector] FMUL R208, R145.reuse, R29 ;idx: 824; func: 4
+
+[NVBit Fault Injector] FMUL R209, R145.reuse, R31 ;idx: 825; func: 4
+
+[NVBit Fault Injector] FMUL R210, R145.reuse, R61 ;idx: 826; func: 4
+
+[NVBit Fault Injector] FMUL R211, R145.reuse, R63 ;idx: 827; func: 4
+
+[NVBit Fault Injector] FMUL R212, R145.reuse, R93 ;idx: 828; func: 4
+
+[NVBit Fault Injector] FMUL R213, R145.reuse, R95 ;idx: 829; func: 4
+
+[NVBit Fault Injector] FMUL R214, R145.reuse, R125 ;idx: 830; func: 4
+
+[NVBit Fault Injector] FMUL R215, R145, R127 ;idx: 831; func: 4
+
+[NVBit Fault Injector] LEPC R130 ;idx: 832; func: 4
+
+[NVBit Fault Injector] CALL.REL 0x3490 ;idx: 833; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P1, RZ, R137, 0x8, RZ, 0xc0, !PT ;idx: 834; func: 4
+
+[NVBit Fault Injector] ISETP.EQ.AND P5, PT, R133, 0x0, P1 ;idx: 835; func: 4
+
+[NVBit Fault Injector] @P1 IADD3 R136, R136, 0x1, RZ ;idx: 836; func: 4
+
+[NVBit Fault Injector] @P1 BAR.SYNC 0x0 ;idx: 837; func: 4
+
+[NVBit Fault Injector] @P5 MEMBAR.GPU ;idx: 838; func: 4
+
+[NVBit Fault Injector] @P5 STG.E.EF.STRONG.GPU [R216], R136 ;idx: 839; func: 4
+
+[NVBit Fault Injector] EXIT ;idx: 840; func: 4
+
+[NVBit Fault Injector] STS [R129], R184 ;idx: 841; func: 4
+
+[NVBit Fault Injector] STS [R129+0x20], R185 ;idx: 842; func: 4
+
+[NVBit Fault Injector] STS [R129+0x40], R186 ;idx: 843; func: 4
+
+[NVBit Fault Injector] STS [R129+0x60], R187 ;idx: 844; func: 4
+
+[NVBit Fault Injector] STS [R129+0x80], R188 ;idx: 845; func: 4
+
+[NVBit Fault Injector] STS [R129+0xa0], R189 ;idx: 846; func: 4
+
+[NVBit Fault Injector] STS [R129+0xc0], R190 ;idx: 847; func: 4
+
+[NVBit Fault Injector] STS [R129+0xe0], R191 ;idx: 848; func: 4
+
+[NVBit Fault Injector] STS [R129+0x400], R192 ;idx: 849; func: 4
+
+[NVBit Fault Injector] STS [R129+0x420], R193 ;idx: 850; func: 4
+
+[NVBit Fault Injector] STS [R129+0x440], R194 ;idx: 851; func: 4
+
+[NVBit Fault Injector] STS [R129+0x460], R195 ;idx: 852; func: 4
+
+[NVBit Fault Injector] STS [R129+0x480], R196 ;idx: 853; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4a0], R197 ;idx: 854; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4c0], R198 ;idx: 855; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4e0], R199 ;idx: 856; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4000], R200 ;idx: 857; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4020], R201 ;idx: 858; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4040], R202 ;idx: 859; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4060], R203 ;idx: 860; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4080], R204 ;idx: 861; func: 4
+
+[NVBit Fault Injector] STS [R129+0x40a0], R205 ;idx: 862; func: 4
+
+[NVBit Fault Injector] STS [R129+0x40c0], R206 ;idx: 863; func: 4
+
+[NVBit Fault Injector] STS [R129+0x40e0], R207 ;idx: 864; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4400], R208 ;idx: 865; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4420], R209 ;idx: 866; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4440], R210 ;idx: 867; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4460], R211 ;idx: 868; func: 4
+
+[NVBit Fault Injector] STS [R129+0x4480], R212 ;idx: 869; func: 4
+
+[NVBit Fault Injector] STS [R129+0x44a0], R213 ;idx: 870; func: 4
+
+[NVBit Fault Injector] STS [R129+0x44c0], R214 ;idx: 871; func: 4
+
+[NVBit Fault Injector] STS [R129+0x44e0], R215 ;idx: 872; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 873; func: 4
+
+[NVBit Fault Injector] MOV R134, R142 ;idx: 874; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P2, PT, R148, 0x0, PT ;idx: 875; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, 0x0, P2 ;idx: 876; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0x2, P2 ;idx: 877; func: 4
+
+[NVBit Fault Injector] P2R R142, PR, RZ, 0x78 ;idx: 878; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0x4, P2 ;idx: 879; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0x6, P2 ;idx: 880; func: 4
+
+[NVBit Fault Injector] P2R.B1 R142, PR, R142, 0x78 ;idx: 881; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0x8, P2 ;idx: 882; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149.reuse, -0xa, P2 ;idx: 883; func: 4
+
+[NVBit Fault Injector] P2R.B2 R142, PR, R142, 0x78 ;idx: 884; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P3, PT, R149.reuse, -0xc, P2 ;idx: 885; func: 4
+
+[NVBit Fault Injector] ISETP.LT.AND P4, PT, R149, -0xe, P2 ;idx: 886; func: 4
+
+[NVBit Fault Injector] P2R.B3 R142, PR, R142, 0x78 ;idx: 887; func: 4
+
+[NVBit Fault Injector] LDS.128 R184, [R132] ;idx: 888; func: 4
+
+[NVBit Fault Injector] LDS.128 R188, [R132+0x1020] ;idx: 889; func: 4
+
+[NVBit Fault Injector] LDS.128 R192, [R132+0x2040] ;idx: 890; func: 4
+
+[NVBit Fault Injector] LDS.128 R196, [R132+0x3060] ;idx: 891; func: 4
+
+[NVBit Fault Injector] LDS.128 R200, [R132+0x4000] ;idx: 892; func: 4
+
+[NVBit Fault Injector] LDS.128 R204, [R132+0x5020] ;idx: 893; func: 4
+
+[NVBit Fault Injector] LDS.128 R208, [R132+0x6040] ;idx: 894; func: 4
+
+[NVBit Fault Injector] LDS.128 R212, [R132+0x7060] ;idx: 895; func: 4
+
+[NVBit Fault Injector] BAR.SYNC.DEFER_BLOCKING 0x0 ;idx: 896; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P2, RZ, R137, 0x20, RZ, 0xc0, !PT ;idx: 897; func: 4
+
+[NVBit Fault Injector] ISETP.GT.AND P2, PT, R136, 0x0, P2 ;idx: 898; func: 4
+
+[NVBit Fault Injector] @P2 BRA.U 0x3840 ;idx: 899; func: 4
+
+[NVBit Fault Injector] @!P1 BRA 0x3e20 ;idx: 900; func: 4
+
+[NVBit Fault Injector] MOV R135, R152 ;idx: 901; func: 4
+
+[NVBit Fault Injector] PRMT R183, R167.reuse, 0x3276, RZ ;idx: 902; func: 4
+
+[NVBit Fault Injector] PRMT R182, R167, 0x1054, RZ ;idx: 903; func: 4
+
+[NVBit Fault Injector] PRMT R181, R166.reuse, 0x3276, RZ ;idx: 904; func: 4
+
+[NVBit Fault Injector] PRMT R180, R166, 0x1054, RZ ;idx: 905; func: 4
+
+[NVBit Fault Injector] PRMT R179, R165.reuse, 0x3276, RZ ;idx: 906; func: 4
+
+[NVBit Fault Injector] PRMT R178, R165, 0x1054, RZ ;idx: 907; func: 4
+
+[NVBit Fault Injector] PRMT R177, R164.reuse, 0x3276, RZ ;idx: 908; func: 4
+
+[NVBit Fault Injector] PRMT R176, R164, 0x1054, RZ ;idx: 909; func: 4
+
+[NVBit Fault Injector] PRMT R175, R163.reuse, 0x3276, RZ ;idx: 910; func: 4
+
+[NVBit Fault Injector] PRMT R174, R163, 0x1054, RZ ;idx: 911; func: 4
+
+[NVBit Fault Injector] PRMT R173, R162.reuse, 0x3276, RZ ;idx: 912; func: 4
+
+[NVBit Fault Injector] PRMT R172, R162, 0x1054, RZ ;idx: 913; func: 4
+
+[NVBit Fault Injector] PRMT R171, R161.reuse, 0x3276, RZ ;idx: 914; func: 4
+
+[NVBit Fault Injector] PRMT R170, R161, 0x1054, RZ ;idx: 915; func: 4
+
+[NVBit Fault Injector] PRMT R169, R160.reuse, 0x3276, RZ ;idx: 916; func: 4
+
+[NVBit Fault Injector] PRMT R168, R160, 0x1054, RZ ;idx: 917; func: 4
+
+[NVBit Fault Injector] PRMT R167, R159.reuse, 0x3276, RZ ;idx: 918; func: 4
+
+[NVBit Fault Injector] PRMT R166, R159, 0x1054, RZ ;idx: 919; func: 4
+
+[NVBit Fault Injector] PRMT R165, R158.reuse, 0x3276, RZ ;idx: 920; func: 4
+
+[NVBit Fault Injector] PRMT R164, R158, 0x1054, RZ ;idx: 921; func: 4
+
+[NVBit Fault Injector] PRMT R163, R157.reuse, 0x3276, RZ ;idx: 922; func: 4
+
+[NVBit Fault Injector] PRMT R162, R157, 0x1054, RZ ;idx: 923; func: 4
+
+[NVBit Fault Injector] PRMT R161, R156.reuse, 0x3276, RZ ;idx: 924; func: 4
+
+[NVBit Fault Injector] PRMT R160, R156, 0x1054, RZ ;idx: 925; func: 4
+
+[NVBit Fault Injector] PRMT R159, R155.reuse, 0x3276, RZ ;idx: 926; func: 4
+
+[NVBit Fault Injector] PRMT R158, R155, 0x1054, RZ ;idx: 927; func: 4
+
+[NVBit Fault Injector] PRMT R157, R154.reuse, 0x3276, RZ ;idx: 928; func: 4
+
+[NVBit Fault Injector] PRMT R156, R154, 0x1054, RZ ;idx: 929; func: 4
+
+[NVBit Fault Injector] PRMT R155, R153.reuse, 0x3276, RZ ;idx: 930; func: 4
+
+[NVBit Fault Injector] PRMT R154, R153, 0x1054, RZ ;idx: 931; func: 4
+
+[NVBit Fault Injector] PRMT R153, R152, 0x3276, RZ ;idx: 932; func: 4
+
+[NVBit Fault Injector] PRMT R152, R135, 0x1054, RZ ;idx: 933; func: 4
+
+[NVBit Fault Injector] @P2 BRA.U 0x3e20 ;idx: 934; func: 4
+
+[NVBit Fault Injector] FFMA R184, R128.reuse, R152, R184 ;idx: 935; func: 4
+
+[NVBit Fault Injector] FFMA R185, R128.reuse, R153, R185 ;idx: 936; func: 4
+
+[NVBit Fault Injector] FFMA R186, R128.reuse, R154, R186 ;idx: 937; func: 4
+
+[NVBit Fault Injector] FFMA R187, R128.reuse, R155, R187 ;idx: 938; func: 4
+
+[NVBit Fault Injector] FFMA R188, R128.reuse, R156, R188 ;idx: 939; func: 4
+
+[NVBit Fault Injector] FFMA R189, R128.reuse, R157, R189 ;idx: 940; func: 4
+
+[NVBit Fault Injector] FFMA R190, R128.reuse, R158, R190 ;idx: 941; func: 4
+
+[NVBit Fault Injector] FFMA R191, R128.reuse, R159, R191 ;idx: 942; func: 4
+
+[NVBit Fault Injector] FFMA R192, R128.reuse, R160, R192 ;idx: 943; func: 4
+
+[NVBit Fault Injector] FFMA R193, R128.reuse, R161, R193 ;idx: 944; func: 4
+
+[NVBit Fault Injector] FFMA R194, R128.reuse, R162, R194 ;idx: 945; func: 4
+
+[NVBit Fault Injector] FFMA R195, R128.reuse, R163, R195 ;idx: 946; func: 4
+
+[NVBit Fault Injector] FFMA R196, R128.reuse, R164, R196 ;idx: 947; func: 4
+
+[NVBit Fault Injector] FFMA R197, R128.reuse, R165, R197 ;idx: 948; func: 4
+
+[NVBit Fault Injector] FFMA R198, R128.reuse, R166, R198 ;idx: 949; func: 4
+
+[NVBit Fault Injector] FFMA R199, R128.reuse, R167, R199 ;idx: 950; func: 4
+
+[NVBit Fault Injector] FFMA R200, R128.reuse, R168, R200 ;idx: 951; func: 4
+
+[NVBit Fault Injector] FFMA R201, R128.reuse, R169, R201 ;idx: 952; func: 4
+
+[NVBit Fault Injector] FFMA R202, R128.reuse, R170, R202 ;idx: 953; func: 4
+
+[NVBit Fault Injector] FFMA R203, R128.reuse, R171, R203 ;idx: 954; func: 4
+
+[NVBit Fault Injector] FFMA R204, R128.reuse, R172, R204 ;idx: 955; func: 4
+
+[NVBit Fault Injector] FFMA R205, R128.reuse, R173, R205 ;idx: 956; func: 4
+
+[NVBit Fault Injector] FFMA R206, R128.reuse, R174, R206 ;idx: 957; func: 4
+
+[NVBit Fault Injector] FFMA R207, R128.reuse, R175, R207 ;idx: 958; func: 4
+
+[NVBit Fault Injector] FFMA R208, R128.reuse, R176, R208 ;idx: 959; func: 4
+
+[NVBit Fault Injector] FFMA R209, R128.reuse, R177, R209 ;idx: 960; func: 4
+
+[NVBit Fault Injector] FFMA R210, R128.reuse, R178, R210 ;idx: 961; func: 4
+
+[NVBit Fault Injector] FFMA R211, R128.reuse, R179, R211 ;idx: 962; func: 4
+
+[NVBit Fault Injector] FFMA R212, R128.reuse, R180, R212 ;idx: 963; func: 4
+
+[NVBit Fault Injector] FFMA R213, R128.reuse, R181, R213 ;idx: 964; func: 4
+
+[NVBit Fault Injector] FFMA R214, R128.reuse, R182, R214 ;idx: 965; func: 4
+
+[NVBit Fault Injector] FFMA R215, R128, R183, R215 ;idx: 966; func: 4
+
+[NVBit Fault Injector] @!P0 BRA.U 0x3e20 ;idx: 967; func: 4
+
+[NVBit Fault Injector] R2P PR, R142, 0x78 ;idx: 968; func: 4
+
+[NVBit Fault Injector] LEA R218, P2, R144.reuse, R138, 0x2 ;idx: 969; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R219, R144, R139, RZ, 0x2, P2 ;idx: 970; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R152, [R138], P3 ;idx: 971; func: 4
+
+[NVBit Fault Injector] LEA R220, P2, R144.reuse, R218, 0x2 ;idx: 972; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R221, R144, R219, RZ, 0x2, P2 ;idx: 973; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R154, [R218], P4 ;idx: 974; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B1, 0x78 ;idx: 975; func: 4
+
+[NVBit Fault Injector] LEA R222, P2, R144.reuse, R220, 0x2 ;idx: 976; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R223, R144, R221, RZ, 0x2, P2 ;idx: 977; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R156, [R220], P3 ;idx: 978; func: 4
+
+[NVBit Fault Injector] LEA R224, P2, R144.reuse, R222, 0x2 ;idx: 979; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R225, R144, R223, RZ, 0x2, P2 ;idx: 980; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R158, [R222], P4 ;idx: 981; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B2, 0x78 ;idx: 982; func: 4
+
+[NVBit Fault Injector] LEA R226, P2, R144.reuse, R224, 0x2 ;idx: 983; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R227, R144, R225, RZ, 0x2, P2 ;idx: 984; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R160, [R224], P3 ;idx: 985; func: 4
+
+[NVBit Fault Injector] LEA R228, P2, R144.reuse, R226, 0x2 ;idx: 986; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R229, R144, R227, RZ, 0x2, P2 ;idx: 987; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R162, [R226], P4 ;idx: 988; func: 4
+
+[NVBit Fault Injector] R2P PR, R142.B3, 0x78 ;idx: 989; func: 4
+
+[NVBit Fault Injector] LEA R230, P2, R144.reuse, R228, 0x2 ;idx: 990; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R231, R144, R229, RZ, 0x2, P2 ;idx: 991; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R164, [R228], P3 ;idx: 992; func: 4
+
+[NVBit Fault Injector] LDG.E.LTC128B.64.STRONG.GPU R166, [R230], P4 ;idx: 993; func: 4
+
+[NVBit Fault Injector] LOP3.LUT P2, RZ, R137, 0x20, RZ, 0xc0, !PT ;idx: 994; func: 4
+
+[NVBit Fault Injector] @P2 BRA.U 0x3e40 ;idx: 995; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R184, R185, R184 ;idx: 996; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R185, R187, R186 ;idx: 997; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R186, R189, R188 ;idx: 998; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R187, R191, R190 ;idx: 999; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R188, R193, R192 ;idx: 1000; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R189, R195, R194 ;idx: 1001; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R190, R197, R196 ;idx: 1002; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R191, R199, R198 ;idx: 1003; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R192, R201, R200 ;idx: 1004; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R193, R203, R202 ;idx: 1005; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R194, R205, R204 ;idx: 1006; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R195, R207, R206 ;idx: 1007; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R196, R209, R208 ;idx: 1008; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R197, R211, R210 ;idx: 1009; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R198, R213, R212 ;idx: 1010; func: 4
+
+[NVBit Fault Injector] F2FP.BF16.PACK_AB R199, R215, R214 ;idx: 1011; func: 4
+
+[NVBit Fault Injector] R2P PR, R134, 0x78 ;idx: 1012; func: 4
+
+[NVBit Fault Injector] LEA R218, P2, R143.reuse, R140, 0x2 ;idx: 1013; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R219, R143, R141, RZ, 0x2, P2 ;idx: 1014; func: 4
+
+[NVBit Fault Injector] @P3 STG.E.EF.64 [R140], R184 ;idx: 1015; func: 4
+
+[NVBit Fault Injector] LEA R220, P2, R143.reuse, R218, 0x2 ;idx: 1016; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R221, R143, R219, RZ, 0x2, P2 ;idx: 1017; func: 4
+
+[NVBit Fault Injector] @P4 STG.E.EF.64 [R218], R186 ;idx: 1018; func: 4
+
+[NVBit Fault Injector] R2P PR, R134.B1, 0x78 ;idx: 1019; func: 4
+
+[NVBit Fault Injector] LEA R222, P2, R143.reuse, R220, 0x2 ;idx: 1020; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R223, R143, R221, RZ, 0x2, P2 ;idx: 1021; func: 4
+
+[NVBit Fault Injector] @P3 STG.E.EF.64 [R220], R188 ;idx: 1022; func: 4
+
+[NVBit Fault Injector] LEA R224, P2, R143.reuse, R222, 0x2 ;idx: 1023; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R225, R143, R223, RZ, 0x2, P2 ;idx: 1024; func: 4
+
+[NVBit Fault Injector] @P4 STG.E.EF.64 [R222], R190 ;idx: 1025; func: 4
+
+[NVBit Fault Injector] R2P PR, R134.B2, 0x78 ;idx: 1026; func: 4
+
+[NVBit Fault Injector] LEA R226, P2, R143.reuse, R224, 0x2 ;idx: 1027; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R227, R143, R225, RZ, 0x2, P2 ;idx: 1028; func: 4
+
+[NVBit Fault Injector] @P3 STG.E.EF.64 [R224], R192 ;idx: 1029; func: 4
+
+[NVBit Fault Injector] LEA R228, P2, R143.reuse, R226, 0x2 ;idx: 1030; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R229, R143, R227, RZ, 0x2, P2 ;idx: 1031; func: 4
+
+[NVBit Fault Injector] @P4 STG.E.EF.64 [R226], R194 ;idx: 1032; func: 4
+
+[NVBit Fault Injector] R2P PR, R134.B3, 0x78 ;idx: 1033; func: 4
+
+[NVBit Fault Injector] LEA R230, P2, R143.reuse, R228, 0x2 ;idx: 1034; func: 4
+
+[NVBit Fault Injector] LEA.HI.X R231, R143, R229, RZ, 0x2, P2 ;idx: 1035; func: 4
+
+[NVBit Fault Injector] @P3 STG.E.EF.64 [R228], R196 ;idx: 1036; func: 4
+
+[NVBit Fault Injector] @P4 STG.E.EF.64 [R230], R198 ;idx: 1037; func: 4
+
+[NVBit Fault Injector] RET.ABS R130 0x20 ;idx: 1038; func: 4
+
+[NVBit Fault Injector] BRA 0x40f0 ;idx: 1039; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1040; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1041; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1042; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1043; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1044; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1045; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1046; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1047; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1048; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1049; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1050; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1051; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1052; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1053; func: 4
+
+[NVBit Fault Injector] NOP ;idx: 1054; func: 4
+
+[NVBit Fault Injector] NOP;idx: 1055; func: 4
+
+-51314.28125
+PRINTF2: TERMINATING CONTEXT 0x1921f160
