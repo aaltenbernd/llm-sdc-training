@@ -71,7 +71,13 @@ Runtime comparison experiment without anomaly detection:
 
 ### Fault Injection Training
 
-Backward-pass NVBit fault injection with anomaly detection and recomputation:
+Standard training with fault injection:
+
+```bash
+./scripts/fi/train_fi.sh
+```
+
+Standard training with fault injection and recompute
 
 ```bash
 ./scripts/fi/train_fi_recompute.sh
@@ -83,9 +89,7 @@ Backward-pass NVBit fault injection with anomaly detection and recomputation:
 
 Deterministic single-fault debugging configuration:
 
-```bash
-./scripts/fi/train_fi_debug_single_fault.sh
-```
+
 
 ---
 
