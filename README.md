@@ -40,23 +40,17 @@ cd ../../../..
 
 ## Running Experiments
 
-### Baseline Training
-
 Standard training without fault injection:
 
 ```bash
 ./scripts/base/train_baseline.sh
 ```
 
-### Baseline Training (No Detection)
-
 Runtime comparison experiment without anomaly detection:
 
 ```bash
 ./scripts/base/train_baseline_no_detection.sh
 ```
-
-### Fault Injection Training
 
 Standard training with fault injection:
 
