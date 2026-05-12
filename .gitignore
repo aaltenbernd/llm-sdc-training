@@ -1,0 +1,9 @@
+venv
+wandb
+__pycache__
+checkpoints
+*.so
+*.pt
+*.pyc
+peft_pretraining/__pycache__/
+plot/data
