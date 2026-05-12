@@ -1,6 +1,6 @@
 # llm-sdc-training
 
-Exploring Silent Data Corruption (SDC) as a Reliability Challenge in Large Language Model Training.
+Exploring Silent Data Corruption as a Reliability Challenge in Large Language Model Training
 
 Paper: https://arxiv.org/pdf/2604.00726
 
