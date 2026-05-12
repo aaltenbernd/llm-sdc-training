@@ -16,7 +16,7 @@ Experiments on LLaMA models with 60M, 350M, and 1.3B parameters demonstrate that
 ## Prerequisites
 
 - Python 3.12.3
-- Experiments were conducted on a NVIDIA L40S
+- Experiments were conducted on an NVIDIA L40S
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ Standard training without fault injection:
 ./scripts/base/train_baseline.sh
 ```
 
-### Runtime Baseline (No Detection)
+### Baseline Training (No Detection)
 
 Runtime comparison experiment without anomaly detection:
 
@@ -64,7 +64,7 @@ Standard training with fault injection:
 ./scripts/fi/train_fi.sh
 ```
 
-Standard training with fault injection and recompute
+Standard training with fault injection and recompute:
 
 ```bash
 ./scripts/fi/train_fi_recompute.sh
